@@ -32,13 +32,14 @@ value of `P(N)` by [integrating `1 - P(N)`][expectedValue].
 
 ```python
 >>> import mpmath
->>> mpmath.mp.dps = 50
+>>> mpmath.mp.dps = 300
 >>> q = lambda n: 1 - (1 - (1 - 1/10E9) ** (n)) ** (10E9)
->>> mpmath.quad(q, [0, mpmath.inf])
-mpf('235790561308.89049113279209421732468319578834860609999')
+>>> E = mpmath.quad(q, [0, mpmath.inf])
+>>> str(E)[:20]
+'236030646407.8551119'
 ```
 
-So we can expect to find all 10 digit phone numbers in about `235.79` billion digits of pi.
+So we can expect to find all 10 digit phone numbers in about `236.03` billion digits of pi.
 
 ## Actual value
 
