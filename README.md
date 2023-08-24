@@ -54,7 +54,8 @@ digits and use a bitmap to track which phone numbers have been encountered.
 
 After running for about two hours (bottleneck seems to be in hard drive speed and ram speed, but
 not really worth it to parallelize this problem), the program reports that all 10 digit phone
-numbers can be found in the first `241.6` billion digits of pi (`241641121048` to be exact).
+numbers can be found in the first `241.6` billion digits of pi (`241641121048` to be exact). 
+This result is also consistent with term A(10) from sequence [A036903](https://oeis.org/A036903) of the OEIS. 
 
 I was quite delighted that the actual value was so close to the expected value.
 
